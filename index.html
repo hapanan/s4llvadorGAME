@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>S4LLVADORGAME - Казино</title>
+    
+    <!-- Favicon с синей буквой S -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%230d0d0d' rx='20'/><text x='50' y='72' font-size='70' fill='%23007bff' font-weight='bold' text-anchor='middle' font-family='Arial, sans-serif'>S</text></svg>">
+    
+    <!-- Альтернативные favicon для разных устройств -->
+    <link rel="apple-touch-icon" sizes="180x180" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' fill='%230d0d0d' rx='35'/><text x='90' y='125' font-size='120' fill='%23007bff' font-weight='bold' text-anchor='middle' font-family='Arial, sans-serif'>S</text></svg>">
+    <link rel="icon" type="image/png" sizes="32x32" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%230d0d0d' rx='8'/><text x='16' y='24' font-size='22' fill='%23007bff' font-weight='bold' text-anchor='middle' font-family='Arial, sans-serif'>S</text></svg>">
+    <link rel="icon" type="image/png" sizes="16x16" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230d0d0d' rx='4'/><text x='8' y='12' font-size='11' fill='%23007bff' font-weight='bold' text-anchor='middle' font-family='Arial, sans-serif'>S</text></svg>">
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -14,7 +23,7 @@
         }
 
         :root {
-            --primary: #ffcc00;
+            --primary: #007bff;
             --secondary: #1a1a1a;
             --accent: #ff3366;
             --dark: #0d0d0d;
@@ -65,7 +74,7 @@
         .logo h1 {
             font-size: 2.5rem;
             color: var(--primary);
-            text-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+            text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
             font-weight: bold;
         }
 
@@ -88,7 +97,7 @@
             align-items: center;
             gap: 10px;
             font-size: 1.2rem;
-            box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
         }
 
         .balance i {
@@ -112,7 +121,7 @@
             cursor: pointer;
             transition: all 0.3s;
             font-weight: bold;
-            border-right: 1px solid rgba(255, 204, 0, 0.3);
+            border-right: 1px solid rgba(0, 123, 255, 0.3);
         }
 
         .nav-tab:last-child {
@@ -125,7 +134,7 @@
         }
 
         .nav-tab:hover {
-            background: rgba(255, 204, 0, 0.7);
+            background: rgba(0, 123, 255, 0.7);
             color: var(--dark);
         }
 
@@ -267,8 +276,8 @@
         }
 
         .open-btn {
-            background: linear-gradient(to bottom, var(--primary), #e6b800);
-            color: var(--dark);
+            background: linear-gradient(to bottom, var(--primary), #0056b3);
+            color: var(--light);
             border: none;
             padding: 12px 25px;
             border-radius: 8px;
@@ -285,9 +294,9 @@
         }
 
         .open-btn:hover {
-            background: linear-gradient(to bottom, #ffd633, #ffcc00);
+            background: linear-gradient(to bottom, #3399ff, #007bff);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
         }
 
         /* Анимация открытия кейса */
@@ -337,6 +346,22 @@
             transform: translateY(0);
         }
 
+        .close-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .close-btn:hover {
+            background: #3399ff;
+            transform: translateY(-2px);
+        }
+
         .case-sparkles {
             position: absolute;
             top: 0;
@@ -350,7 +375,7 @@
             position: absolute;
             width: 20px;
             height: 20px;
-            background: gold;
+            background: var(--primary);
             border-radius: 50%;
             opacity: 0;
             animation: sparkleFloat 2s ease-out forwards;
@@ -429,8 +454,8 @@
         }
 
         .spin-btn {
-            background: linear-gradient(to bottom, var(--primary), #e6b800);
-            color: var(--dark);
+            background: linear-gradient(to bottom, var(--primary), #0056b3);
+            color: var(--light);
             border: none;
             padding: 15px 40px;
             border-radius: 10px;
@@ -441,9 +466,9 @@
         }
 
         .spin-btn:hover {
-            background: linear-gradient(to bottom, #ffd633, #ffcc00);
+            background: linear-gradient(to bottom, #3399ff, #007bff);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
         }
 
         .spin-btn:disabled {
@@ -465,7 +490,7 @@
 
         .bet-btn {
             background: var(--primary);
-            color: var(--dark);
+            color: var(--light);
             border: none;
             width: 40px;
             height: 40px;
@@ -476,7 +501,7 @@
         }
 
         .bet-btn:hover {
-            background: #ffd633;
+            background: #3399ff;
         }
 
         .bet-amount {
@@ -545,8 +570,8 @@
         }
 
         .place-bet-btn {
-            background: linear-gradient(to bottom, var(--primary), #e6b800);
-            color: var(--dark);
+            background: linear-gradient(to bottom, var(--primary), #0056b3);
+            color: var(--light);
             border: none;
             padding: 15px 40px;
             border-radius: 10px;
@@ -557,9 +582,9 @@
         }
 
         .place-bet-btn:hover {
-            background: linear-gradient(to bottom, #ffd633, #ffcc00);
+            background: linear-gradient(to bottom, #3399ff, #007bff);
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(255, 204, 0, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.4);
         }
 
         /* History */
@@ -641,7 +666,7 @@
             .cases-container {
                 grid-template-columns: repeat(2, 1fr);
             }
-
+            
             .slots-machine {
                 flex-wrap: wrap;
             }
@@ -652,34 +677,34 @@
                 flex-direction: column;
                 gap: 20px;
             }
-
+            
             .cases-container {
                 grid-template-columns: 1fr;
             }
-
+            
             .slots-machine {
                 gap: 10px;
             }
-
+            
             .slot {
                 width: 80px;
                 height: 100px;
             }
-
+            
             .slot-symbol {
                 height: 100px;
                 font-size: 2rem;
             }
-
+            
             .red-black-table {
                 flex-direction: column;
                 align-items: center;
             }
-
+            
             .nav-tabs {
                 flex-wrap: wrap;
             }
-
+            
             .nav-tab {
                 flex: 1 0 50%;
             }
@@ -696,7 +721,7 @@
             <button class="close-btn" id="closeCaseAnimation">Продолжить</button>
         </div>
     </div>
-
+    
     <div class="container">
         <header>
             <div class="header-content">
@@ -1083,7 +1108,7 @@
             <div class="slots-container">
                 <h2><i class="fas fa-sliders-h"></i> Игровые Автоматы</h2>
                 <p>Сыграйте в слоты и выиграйте крупный джекпот!</p>
-
+                
                 <div class="slots-machine">
                     <div class="slot">
                         <div class="slot-reel" id="reel1"></div>
@@ -1104,7 +1129,7 @@
                         <div class="slot-reel" id="reel6"></div>
                     </div>
                 </div>
-
+                
                 <div class="slots-controls">
                     <div class="bet-controls">
                         <button class="bet-btn" id="decrease-bet">-</button>
@@ -1115,7 +1140,7 @@
                         <i class="fas fa-play"></i> Крутить
                     </button>
                 </div>
-
+                
                 <div id="slots-result" style="margin-top: 20px; font-size: 1.2rem;"></div>
             </div>
         </div>
@@ -1125,7 +1150,7 @@
             <div class="red-black-container">
                 <h2><i class="fas fa-dice"></i> Красное или Черное</h2>
                 <p>Сделайте ставку на цвет и удвойте свои монеты!</p>
-
+                
                 <div class="red-black-table">
                     <div class="bet-option red-option" data-bet="red">
                         <i class="fas fa-square-full" style="color: white; font-size: 3rem;"></i>
@@ -1138,7 +1163,7 @@
                         <div>х2</div>
                     </div>
                 </div>
-
+                
                 <div class="red-black-controls">
                     <div class="bet-controls">
                         <button class="bet-btn" id="decrease-rb-bet">-</button>
@@ -1149,7 +1174,7 @@
                         <i class="fas fa-coins"></i> Сделать ставку
                     </button>
                 </div>
-
+                
                 <div id="rb-result" style="margin-top: 20px; font-size: 1.2rem;"></div>
             </div>
         </div>
@@ -1186,7 +1211,7 @@
                 isWin,
                 timestamp: new Date().toLocaleTimeString()
             };
-
+            
             history.unshift(historyItem);
             updateHistory();
         }
@@ -1195,11 +1220,11 @@
         function updateHistory() {
             const historyList = document.getElementById('historyList');
             historyList.innerHTML = '';
-
+            
             history.forEach(item => {
                 const historyItem = document.createElement('div');
                 historyItem.className = `history-item ${item.isWin ? 'positive' : 'negative'}`;
-
+                
                 const winText = item.isWin ? `+${item.amount}` : `-${item.amount}`;
                 historyItem.innerHTML = `
                     <span>${item.game}</span>
@@ -1207,7 +1232,7 @@
                     <span>${winText}</span>
                     <span>${item.timestamp}</span>
                 `;
-
+                
                 historyList.appendChild(historyItem);
             });
         }
@@ -1218,14 +1243,14 @@
             const prizeElement = document.getElementById('casePrize');
             const prizeName = document.getElementById('prizeName');
             const sparklesContainer = document.getElementById('caseSparkles');
-
+            
             // Устанавливаем приз
             prizeElement.innerHTML = wonItem.icon;
             prizeName.textContent = wonItem.text === "Пусто" ? "Ничего не выиграно" : wonItem.text;
-
+            
             // Показываем анимацию
             animation.style.display = 'flex';
-
+            
             // Создаем искры
             sparklesContainer.innerHTML = '';
             for (let i = 0; i < 20; i++) {
@@ -1234,10 +1259,10 @@
                 sparkle.style.left = Math.random() * 100 + '%';
                 sparkle.style.top = Math.random() * 100 + '%';
                 sparkle.style.animationDelay = Math.random() * 2 + 's';
-                sparkle.style.background = wonItem.text === "Пусто" ? '#ff3333' : '#ffcc00';
+                sparkle.style.background = wonItem.text === "Пусто" ? '#ff3333' : '#007bff';
                 sparklesContainer.appendChild(sparkle);
             }
-
+            
             // Анимация появления приза
             setTimeout(() => {
                 prizeElement.classList.add('revealed');
@@ -1252,7 +1277,7 @@
             const animation = document.getElementById('caseOpeningAnimation');
             const prizeElement = document.getElementById('casePrize');
             const prizeName = document.getElementById('prizeName');
-
+            
             prizeElement.classList.remove('revealed');
             prizeName.classList.remove('revealed');
             animation.style.display = 'none';
@@ -1316,7 +1341,7 @@
                 document.getElementById('reel5'),
                 document.getElementById('reel6')
             ];
-
+            
             // Заполняем барабаны символами
             reels.forEach(reel => {
                 reel.innerHTML = '';
@@ -1352,7 +1377,7 @@
             ];
             const results = [];
             const spinBtn = document.getElementById('spin-btn');
-
+            
             spinBtn.disabled = true;
             spinBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Вращение...';
 
@@ -1362,16 +1387,16 @@
                 const extraSpins = 10 + index * 2;
                 const randomSymbol = symbols[Math.floor(Math.random() * symbols.length)];
                 results.push(randomSymbol);
-
+                
                 // Сбрасываем позицию
                 reel.style.transition = 'none';
                 reel.style.transform = 'translateY(0)';
-
+                
                 // Запускаем анимацию с задержкой для каждого барабана
                 setTimeout(() => {
                     reel.style.transition = 'transform 3s cubic-bezier(0.1, 0.8, 0.2, 1)';
                     reel.style.transform = `translateY(-${120 * extraSpins}px)`;
-
+                    
                     // Устанавливаем конечный символ
                     setTimeout(() => {
                         // Создаем новый набор символов с выигрышным символом в видимой области
@@ -1394,11 +1419,11 @@
             // Проверка результата через 4 секунды
             setTimeout(() => {
                 const resultElement = document.getElementById('slots-result');
-
+                
                 // Проверка комбинаций
                 let winAmount = 0;
                 let winType = '';
-
+                
                 // Проверка на 6 одинаковых
                 if (results.every(symbol => symbol === results[0])) {
                     winAmount = currentBet * 100;
@@ -1493,15 +1518,15 @@
                     document.querySelectorAll('.nav-tab').forEach(t => {
                         t.classList.remove('active');
                     });
-
+                    
                     // Добавляем активный класс текущей вкладке
                     this.classList.add('active');
-
+                    
                     // Скрываем все разделы
                     document.querySelectorAll('.game-section').forEach(section => {
                         section.classList.remove('active');
                     });
-
+                    
                     // Показываем выбранный раздел
                     const tabId = this.getAttribute('data-tab');
                     document.getElementById(`${tabId}-section`).classList.add('active');
@@ -1514,7 +1539,7 @@
                     const caseElement = this.closest('.case');
                     const caseType = caseElement.getAttribute('data-type');
                     const price = parseInt(this.getAttribute('data-price'));
-
+                    
                     openCase(caseType, price);
                 });
             });
@@ -1562,7 +1587,7 @@
                     document.querySelectorAll('.bet-option').forEach(opt => {
                         opt.classList.remove('active');
                     });
-
+                    
                     // Добавляем активный класс выбранной опции
                     this.classList.add('active');
                     selectedBet = this.getAttribute('data-bet');
